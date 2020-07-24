@@ -34,11 +34,28 @@ author:
   picture: /assets/images/lyubo.png
 
 # Build settings
-theme: jekyll-theme-basically-basic
+# theme: jekyll-theme-basically-basic
 remote_theme: mmistakes/jekyll-theme-basically-basic
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      read_time: true
+  - scope:
+      path: "_recipes"
+      type: recipes
+    values:
+      layout: post
+      read_time: true
+      
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
